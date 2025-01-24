@@ -1,2 +1,2 @@
-# GG2025
+# Global Game Jam 2025
 Boba shooter game
