@@ -8,6 +8,8 @@ public class StrawAim : MonoBehaviour
     private float rotateSpeed = 20f;
     //ADD ability to have more/less based on difficulty chosen
     //List of available tapi
+    public List<GameObject> possibleTapi;
+    public int tapiCount = 3;
     public List<GameObject> tapiVariants;
     public Transform tapiSpawn;
     Random rnd = new Random();
@@ -17,13 +19,24 @@ public class StrawAim : MonoBehaviour
     public List<GameObject> nextTapisPositions;
 
     private float shootTimer;
+    private float shootSpeed = 1f;
     private float cooldown = 0.5f;
     
     private void Start()
     {
         //ADD Randomize the tapiVariants
+        for (int i = 0; i < tapiCount; i++)
+        {
+            var n = rnd.Next(possibleTapi.Count);
+            print(possibleTapi.Count + " " + n.ToString());
+            tapiVariants.Add(possibleTapi[n]);
+            possibleTapi.RemoveAt(n);
+        }
+        print(tapiVariants);
+        //Add a Tapi
         nextTapis.Add(tapiVariants[rnd.Next(tapiVariants.Count)]);
         nextTapis.Add(tapiVariants[rnd.Next(tapiVariants.Count)]);
+        //Add a Tapi, then add the tapis to the tapi positions.
         AddNextTapis();
     }
 
@@ -41,10 +54,10 @@ public class StrawAim : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && shootTimer < Time.timeSinceLevelLoad)
         {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             //Spawn Tapi on spawnpoint
             var tapioka = Instantiate(nextTapis[0], tapiSpawn.position, Quaternion.identity);
             tapioka.GetComponent<TapiController>().direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+            tapioka.GetComponent<TapiController>().shootSpeed = shootSpeed;
             nextTapis.RemoveAt(0);
             AddNextTapis();
             shootTimer = Time.timeSinceLevelLoad + cooldown;

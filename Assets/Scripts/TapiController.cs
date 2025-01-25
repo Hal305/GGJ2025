@@ -3,15 +3,25 @@ using UnityEngine;
 
 public class TapiController : MonoBehaviour
 {
-    public float speed;
-    public Vector2 direction;
+    public float shootSpeed;
+    public Vector2 direction = Vector2.down;
     //What color/sprite is on it
     public int variant;
+    private float riseSpeed = 0.1f;
+    
+    
+    private Rigidbody2D rb;
 
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        rb.linearVelocity = direction * shootSpeed;
+        //swap riseSpeed with 
+    }
+    
     private void Update()
     {
-        transform.Translate(direction * speed * Time.deltaTime);
-        var colliders = Physics2D.OverlapCircleAll(transform.position, 0.5f);
+        var colliders = Physics2D.OverlapCircleAll(transform.position, 0.6f);
         int bubbleCounter = 0;
         for (int i = 0; i < colliders.Length; i++)
         {
@@ -29,17 +39,14 @@ public class TapiController : MonoBehaviour
             //Ondestroy Pop nearby bubbles of the same color
             Destroy(gameObject);
         }
+        
+        transform.Translate(Vector2.up * Time.deltaTime * riseSpeed);
     }
 
-    void OnCollisionStay2D(Collision2D collision)
-    {
-        speed = 0.03f;
-        direction = Vector2.up;
-    }
 
     private void OnDestroy()
     {
-        var colliders = Physics2D.OverlapCircleAll(transform.position, 0.6f);
+        var colliders = Physics2D.OverlapCircleAll(transform.position, 0.7f);
         for (int i = 0; i < colliders.Length; i++)
         {
             if (colliders[i].tag == "Tapioka")
