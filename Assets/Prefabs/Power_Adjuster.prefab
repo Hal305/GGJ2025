@@ -279,6 +279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e54db58a0b1fc1e47ad5a91902569e2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _type: 0
   _curve:
     serializedVersion: 2
     m_Curve:
@@ -329,20 +330,20 @@ MonoBehaviour:
   _image: {fileID: 4462512274743207782}
   _gradient:
     serializedVersion: 2
-    key0: {r: 0.17011185, g: 1, b: 0.118867874, a: 1}
-    key1: {r: 1, g: 0.95899147, b: 0.42075467, a: 1}
-    key2: {r: 1, g: 0.2396226, b: 0.2396226, a: 0}
-    key3: {r: 0, g: 0, b: 0, a: 0}
-    key4: {r: 0, g: 0, b: 0, a: 0}
-    key5: {r: 0, g: 0, b: 0, a: 0}
+    key0: {r: 0.03529412, g: 0.9960785, b: 0, a: 1}
+    key1: {r: 0.03529412, g: 0.9960785, b: 0, a: 1}
+    key2: {r: 0.9960785, g: 0.9058824, b: 0, a: 0}
+    key3: {r: 0.9960785, g: 0.9058824, b: 0, a: 0}
+    key4: {r: 0.9960785, g: 0, b: 0.0627451, a: 0}
+    key5: {r: 1, g: 0.2396226, b: 0.2396226, a: 0}
     key6: {r: 0, g: 0, b: 0, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
     ctime0: 0
-    ctime1: 32768
-    ctime2: 65535
-    ctime3: 0
-    ctime4: 0
-    ctime5: 0
+    ctime1: 25559
+    ctime2: 26214
+    ctime3: 51773
+    ctime4: 52428
+    ctime5: 65535
     ctime6: 0
     ctime7: 0
     atime0: 0
@@ -355,7 +356,7 @@ MonoBehaviour:
     atime7: 0
     m_Mode: 0
     m_ColorSpace: -1
-    m_NumColorKeys: 3
+    m_NumColorKeys: 6
     m_NumAlphaKeys: 2
 --- !u!223 &7860673844737073335
 Canvas:
@@ -364,7 +365,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7775770398311029461}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_RenderMode: 2
   m_Camera: {fileID: 0}

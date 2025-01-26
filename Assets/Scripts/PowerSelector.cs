@@ -1,15 +1,19 @@
 using System.Collections;
 using UnityEngine;
 
-public class PowerSelector : MonoBehaviour
+public class DifficultySelector : MonoBehaviour
 {
+    public enum Type { Water, Boba, Straw }
+    [SerializeField] private Type _type = default;
+    public Type SelectorType { get { return _type; } }
+
     [SerializeField] private AnimationCurve _curve = null;
     [SerializeField] private UnityEngine.UI.Image _fillImage = null;
     [SerializeField] private float _animationSpeed = 1f;
 
     private bool _selected = false;
 
-    public System.Action<float> onSelected;
+    public System.Action<Color, float> onSelected;
 
     private void Awake()
     {
@@ -22,15 +26,15 @@ public class PowerSelector : MonoBehaviour
             OnSelected();
     }
 
-    public void Enable()
+    public void Enable(float startPoint = 0)
     {
         _selected = false;
-        StartCoroutine(PlayAnimation());
+        StartCoroutine(PlayAnimation(startPoint));
     }
 
-    private IEnumerator PlayAnimation()
+    private IEnumerator PlayAnimation(float startPoint)
     {
-        float timer = 0;
+        float timer = startPoint;
         while (!_selected)
         {
             _fillImage.fillAmount = _curve.Evaluate(timer / 1.0f);
@@ -41,7 +45,7 @@ public class PowerSelector : MonoBehaviour
             yield return null;
         }
 
-        onSelected?.Invoke(_fillImage.fillAmount);
+        onSelected?.Invoke(_fillImage.color, _fillImage.fillAmount);
     }
 
     public void OnSelected()
