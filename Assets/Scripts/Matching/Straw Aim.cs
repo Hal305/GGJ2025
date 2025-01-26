@@ -27,8 +27,7 @@ public class StrawAim : MonoBehaviour
         //ADD Randomize the tapiVariants
         for (int i = 0; i < tapiCount; i++)
         {
-            var n = rnd.Next(possibleTapi.Count);
-            print(possibleTapi.Count + " " + n.ToString());
+            var n = rnd.Next(possibleTapi.Count-1);
             tapiVariants.Add(possibleTapi[n]);
             possibleTapi.RemoveAt(n);
         }
