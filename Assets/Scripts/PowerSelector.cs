@@ -10,6 +10,7 @@ public class DifficultySelector : MonoBehaviour
     [SerializeField] private AnimationCurve _curve = null;
     [SerializeField] private UnityEngine.UI.Image _fillImage = null;
     [SerializeField] private float _animationSpeed = 1f;
+    [SerializeField] private AudioSource _audioSource = null;
 
     private bool _selected = false;
 
@@ -51,5 +52,6 @@ public class DifficultySelector : MonoBehaviour
     public void OnSelected()
     {
         _selected = true;
+        _audioSource.Play();
     }
 }

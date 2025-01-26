@@ -9,6 +9,7 @@ public class Dispenser : MonoBehaviour
 
     [SerializeField] private DifficultySelector _selector = null;
     [SerializeField] private ParticleSystem _particles = null;
+    [SerializeField] private AudioSource _audioSource = null;
 
     public System.Action<Color, float> OnDifficultySelected;
 
@@ -20,6 +21,7 @@ public class Dispenser : MonoBehaviour
 
     private void OnSelected(Color color, float difficulty)
     {
+        _audioSource.Play();
         OnDifficultySelected?.Invoke(color, difficulty);
     }
 
