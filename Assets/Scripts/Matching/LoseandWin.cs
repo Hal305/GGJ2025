@@ -35,7 +35,7 @@ public class LoseandWin : MonoBehaviour
 
         if (lost && Input.GetMouseButtonDown(0))
         {
-            TransitionUI.Instance.PlayTransition(0);
+            TransitionUI.Instance.PlayTransition(1);
         }
     }
 }

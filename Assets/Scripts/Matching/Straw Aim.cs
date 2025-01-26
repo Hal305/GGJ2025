@@ -13,6 +13,8 @@ public class StrawAim : MonoBehaviour
     public List<GameObject> tapiVariants;
     public Transform tapiSpawn;
     
+    public AudioSource audioSource;
+    
     Random rnd = new Random();
     
     public Difficulty difficulty;
@@ -63,6 +65,7 @@ public class StrawAim : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && shootTimer < Time.timeSinceLevelLoad)
         {
+            audioSource.Play();
             //Spawn Tapi on spawnpoint
             var tapioka = Instantiate(nextTapis[0], tapiSpawn.position, Quaternion.identity);
             tapioka.GetComponent<TapiController>().direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
