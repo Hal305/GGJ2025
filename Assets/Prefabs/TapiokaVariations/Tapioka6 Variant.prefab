@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &866071896858543660
+--- !u!1001 &6613318399422717808
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -3271155812505069143, guid: e72b2509b8a4e2748b1bfe89b5fbcafe, type: 3}
       propertyPath: variant
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 301790487432652823, guid: e72b2509b8a4e2748b1bfe89b5fbcafe, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.3
+      value: -0.94
       objectReference: {fileID: 0}
     - target: {fileID: 301790487432652823, guid: e72b2509b8a4e2748b1bfe89b5fbcafe, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.54
+      value: -0.92
       objectReference: {fileID: 0}
     - target: {fileID: 301790487432652823, guid: e72b2509b8a4e2748b1bfe89b5fbcafe, type: 3}
       propertyPath: m_LocalPosition.z
@@ -55,18 +55,22 @@ PrefabInstance:
     - target: {fileID: 1525977472397407681, guid: e72b2509b8a4e2748b1bfe89b5fbcafe, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -3078879294663434774, guid: 9dee778d20c212f4996477d2e13590bb, type: 3}
+      objectReference: {fileID: -7950579284507612072, guid: 9dee778d20c212f4996477d2e13590bb, type: 3}
     - target: {fileID: 1525977472397407681, guid: e72b2509b8a4e2748b1bfe89b5fbcafe, type: 3}
       propertyPath: m_Color.b
-      value: 0.9641285
+      value: 0.85966444
+      objectReference: {fileID: 0}
+    - target: {fileID: 1525977472397407681, guid: e72b2509b8a4e2748b1bfe89b5fbcafe, type: 3}
+      propertyPath: m_Color.g
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1525977472397407681, guid: e72b2509b8a4e2748b1bfe89b5fbcafe, type: 3}
       propertyPath: m_Color.r
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6343225018074799357, guid: e72b2509b8a4e2748b1bfe89b5fbcafe, type: 3}
       propertyPath: m_Name
-      value: Tapioka4 Variant
+      value: Tapioka6 Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
