@@ -197,6 +197,6 @@ public class ConvayorManager : MonoBehaviour
         _bobaCup.transform.eulerAngles = startRotation;
 
         yield return new WaitForSeconds(0.5f);
-        TransitionUI.Instance.PlayTransition(2);
+        TransitionUI.Instance.PlayTransition(2, 1);
     }
 }
