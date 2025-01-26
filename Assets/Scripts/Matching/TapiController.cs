@@ -1,4 +1,5 @@
 using System;
+using System.Threading;
 using UnityEngine;
 
 public class TapiController : MonoBehaviour
@@ -9,6 +10,10 @@ public class TapiController : MonoBehaviour
     public int variant;
     private float riseSpeed = 0.1f;
     
+    public Difficulty difficulty;
+
+    public GameObject tapiBody;
+    
     
     private Rigidbody2D rb;
 
@@ -16,12 +21,12 @@ public class TapiController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         rb.linearVelocity = direction * shootSpeed;
-        //swap riseSpeed with 
+        //riseSpeed = difficulty.riseSpeed;
     }
     
     private void Update()
     {
-        var colliders = Physics2D.OverlapCircleAll(transform.position, 0.6f);
+        var colliders = Physics2D.OverlapCircleAll(transform.position, 0.65f);
         int bubbleCounter = 0;
         for (int i = 0; i < colliders.Length; i++)
         {
@@ -54,5 +59,8 @@ public class TapiController : MonoBehaviour
                 if (colliders[i].GetComponent<TapiController>().variant == variant) Destroy(colliders[i].gameObject);
             }
         }
+        var body = Instantiate(tapiBody, transform.position, Quaternion.identity);
+        body.GetComponent<SpriteRenderer>().color = this.GetComponent<SpriteRenderer>().color;
+        Destroy(body, 0.4f);
     }
 }

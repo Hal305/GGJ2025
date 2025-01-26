@@ -12,7 +12,12 @@ public class StrawAim : MonoBehaviour
     public int tapiCount = 3;
     public List<GameObject> tapiVariants;
     public Transform tapiSpawn;
+    
     Random rnd = new Random();
+    
+    public Difficulty difficulty;
+    
+    public List<GameObject> startTapiPoints;
 
     //Current + Future tapis shown in the straw
     public List<GameObject> nextTapis;
@@ -24,6 +29,7 @@ public class StrawAim : MonoBehaviour
     
     private void Start()
     {
+        tapiCount = difficulty.tapiCount;
         //ADD Randomize the tapiVariants
         for (int i = 0; i < tapiCount; i++)
         {
@@ -31,12 +37,16 @@ public class StrawAim : MonoBehaviour
             tapiVariants.Add(possibleTapi[n]);
             possibleTapi.RemoveAt(n);
         }
-        print(tapiVariants);
         //Add a Tapi
         nextTapis.Add(tapiVariants[rnd.Next(tapiVariants.Count)]);
         nextTapis.Add(tapiVariants[rnd.Next(tapiVariants.Count)]);
         //Add a Tapi, then add the tapis to the tapi positions.
         AddNextTapis();
+
+        for (int i = 0; i < startTapiPoints.Count; i++)
+        {
+            Instantiate(tapiVariants[i], startTapiPoints[i].transform.position, startTapiPoints[i].transform.rotation);
+        }
     }
 
     private void AddNextTapis()

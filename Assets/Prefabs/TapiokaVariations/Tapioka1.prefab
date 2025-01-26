@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 8970842655394690209, guid: 9dee778d20c212f4996477d2e13590bb, type: 3}
+  m_Sprite: {fileID: -5718399848653919479, guid: 9dee778d20c212f4996477d2e13590bb, type: 3}
   m_Color: {r: 0.5895424, g: 0, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -168,3 +168,5 @@ MonoBehaviour:
   shootSpeed: 0
   direction: {x: 0, y: -1}
   variant: 1
+  difficulty: {fileID: 11400000, guid: 3be872f35a2f995459e09e045a4002f8, type: 2}
+  tapiBody: {fileID: 5001660642835136216, guid: 68691f5774104b742b2014401cef1a2f, type: 3}
