@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: f93318754892549478737f3baaf45fc1
+guid: 406a388c700f9644496164f57a3034d6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5712959122012955994
-    second: Bubble_0
-  - first:
-      213: 5435921867156881161
-    second: Bubble_1
-  - first:
-      213: -4870265009442684133
-    second: Bubble_2
-  - first:
-      213: -5572994966305385033
-    second: Bubble_3
+      213: 1208040086343421634
+    second: image_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -60,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 864
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -84,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -122,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bubble_0
+      name: image_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 70
-        width: 54
-        height: 54
+        x: 0
+        y: 0
+        width: 864
+        height: 650
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,74 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6aa171472fd77b0b0800000000000000
-      internalID: -5712959122012955994
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bubble_1
-      rect:
-        serializedVersion: 2
-        x: 70
-        y: 70
-        width: 52
-        height: 54
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 90ff9ae2326407b40800000000000000
-      internalID: 5435921867156881161
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bubble_2
-      rect:
-        serializedVersion: 2
-        x: 5
-        y: 6
-        width: 54
-        height: 54
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b13872617c7596cb0800000000000000
-      internalID: -4870265009442684133
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bubble_3
-      rect:
-        serializedVersion: 2
-        x: 69
-        y: 7
-        width: 54
-        height: 52
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7b5d35aea9eb8a2b0800000000000000
-      internalID: -5572994966305385033
+      spriteID: 2ce8eecde02d3c010800000000000000
+      internalID: 1208040086343421634
       vertices: []
       indices: 
       edges: []
@@ -223,10 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Bubble_0: -5712959122012955994
-      Bubble_1: 5435921867156881161
-      Bubble_2: -4870265009442684133
-      Bubble_3: -5572994966305385033
+      image_0: 1208040086343421634
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
