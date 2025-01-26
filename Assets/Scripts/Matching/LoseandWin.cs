@@ -4,7 +4,10 @@ using UnityEngine;
 public class LoseandWin : MonoBehaviour
 {
     private bool end = false;
+    private bool lost = false;
     private float winTime = 60f;
+
+    public GameObject loseScreen;
     
     
     
@@ -13,9 +16,10 @@ public class LoseandWin : MonoBehaviour
         if (other.tag == "Tapioka" && !end)
         {
             //Scene Transition to menu
-            TransitionUI.Instance.PlayTransition(0);
             print("Lost");
+            loseScreen.GetComponent<SpriteRenderer>().enabled = true;
             end = true;
+            lost = true;
         }
     }
 
@@ -27,6 +31,11 @@ public class LoseandWin : MonoBehaviour
             TransitionUI.Instance.PlayTransition(1);
             print("Win");
             end = true;
+        }
+
+        if (lost && Input.GetMouseButtonDown(0))
+        {
+            TransitionUI.Instance.PlayTransition(0);
         }
     }
 }

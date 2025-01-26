@@ -15,6 +15,7 @@ public class TapiController : MonoBehaviour
     public GameObject tapiBody;
     
     
+    
     private Rigidbody2D rb;
 
     private void Start()
